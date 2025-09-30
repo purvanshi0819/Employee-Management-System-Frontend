@@ -1,0 +1,299 @@
+.authContainer {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.loginTheme {
+  background: linear-gradient(135deg, #1e1b4b, #581c87, #be185d);
+}
+
+.authBackdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.floatingOrbs {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.orb {
+  position: absolute;
+  border-radius: 50%;
+  mix-blend-mode: multiply;
+  filter: blur(40px);
+  opacity: 0.2;
+  animation: pulse 4s ease-in-out infinite;
+}
+
+.orb1 {
+  top: 2.5rem;
+  left: 2.5rem;
+  width: 18rem;
+  height: 18rem;
+  background: #a855f7;
+}
+
+.orb2 {
+  top: 10rem;
+  right: 2.5rem;
+  width: 18rem;
+  height: 18rem;
+  background: #eab308;
+  animation-delay: 2s;
+}
+
+.orb3 {
+  bottom: 2.5rem;
+  left: 50%;
+  width: 18rem;
+  height: 18rem;
+  background: #ec4899;
+  animation-delay: 4s;
+}
+
+.authCard {
+  position: relative;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px);
+  border-radius: 1.5rem;
+  padding: 2rem;
+  width: 100%;
+  max-width: 28rem;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.authHeader {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.authIcon {
+  margin: 0 auto 1rem;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.25);
+}
+
+.loginIcon {
+  background: linear-gradient(135deg, #a855f7, #ec4899);
+}
+
+.authIcon svg {
+  width: 2rem;
+  height: 2rem;
+  color: white;
+}
+
+.authHeader h2 {
+  font-size: 1.875rem;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 0.5rem;
+}
+
+.authHeader p {
+  color: #c4b5fd;
+}
+
+.authForm {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.inputGroup label {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #c4b5fd;
+}
+
+.inputWrapper {
+  position: relative;
+}
+
+.inputIcon {
+  position: absolute;
+  left: 0.75rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #c4b5fd;
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.inputWrapper input {
+  width: 100%;
+  padding: 0.75rem 0.75rem 0.75rem 2.5rem;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 0.75rem;
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.inputWrapper input::placeholder {
+  color: #c4b5fd;
+}
+
+.inputWrapper input:focus {
+  outline: none;
+  border-color: #a855f7;
+  box-shadow: 0 0 0 2px rgba(168, 85, 247, 0.5);
+}
+
+.passwordToggle {
+  position: absolute;
+  right: 0.75rem;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: #c4b5fd;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  padding: 0.25rem;
+}
+
+.passwordToggle:hover {
+  color: white;
+}
+
+.passwordToggle svg {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.authButton {
+  width: 100%;
+  font-weight: 600;
+  padding: 0.75rem 1rem;
+  border-radius: 0.75rem;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.25);
+  transform-origin: center;
+}
+
+.loginButton {
+  background: linear-gradient(135deg, #a855f7, #ec4899);
+  color: white;
+}
+
+.loginButton:hover:not(:disabled) {
+  background: linear-gradient(135deg, #9333ea, #db2777);
+  transform: scale(1.02);
+}
+
+.loginButton:active:not(:disabled) {
+  transform: scale(0.98);
+}
+
+.authButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.loadingContent {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.spinner {
+  width: 1.25rem;
+  height: 1.25rem;
+  border: 2px solid transparent;
+  border-top: 2px solid white;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+.authSwitch {
+  text-align: center;
+}
+
+.authSwitch p {
+  color: #c4b5fd;
+}
+
+.switchLink {
+  background: none;
+  border: none;
+  color: #c4b5fd;
+  font-weight: 600;
+  text-decoration: underline;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.switchLink:hover {
+  color: white;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 0.2;
+  }
+  50% {
+    opacity: 0.3;
+  }
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+  .authContainer {
+    padding: 0.5rem;
+  }
+  
+  .authCard {
+    padding: 1.5rem;
+  }
+  
+  .orb {
+    width: 12rem;
+    height: 12rem;
+  }
+}
+
+.errorMessage{
+    background: rgba(220, 53, 69, 0.1);
+    color: #dc3545;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 12px 20px;
+    border-radius: 12px;
+    text-align: center;
+    border: 1px solid rgba(220, 53, 69, 0.2);
+    letter-spacing: 0.2px;
+} 
+
+
+

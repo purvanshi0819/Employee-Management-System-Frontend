@@ -1,0 +1,46 @@
+/* Footer.module.css */
+
+/* Footer.module.css */
+
+.footerContainer {
+  width: 100%;
+  margin-top: auto;
+  /* margin-bottom: 0; */
+}
+
+.footer {
+  background: rgba(30, 27, 75, 0.9);
+  backdrop-filter: blur(20px);
+  color: #c4b5fd;
+  text-align: center;
+  padding: 1.5rem 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 -8px 32px rgba(0, 0, 0, 0.3);
+  position: relative;
+}
+
+.footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #a855f7, #ec4899, transparent);
+  opacity: 0.7;
+}
+
+.copyrightText {
+  font-size: 0.875rem;
+  font-weight: 400;
+  margin: 0;
+  color: #c4b5fd;
+}
+
+.authorName {
+  background: linear-gradient(45deg, #a855f7, #ec4899);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 600;
+}

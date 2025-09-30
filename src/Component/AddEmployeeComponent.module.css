@@ -1,0 +1,242 @@
+.container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f8fafc, #e2e8f0, #cbd5e1);
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.container::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: 
+    radial-gradient(circle at 20% 50%, rgba(168, 85, 247, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(5, 150, 105, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 40% 80%, rgba(236, 72, 153, 0.1) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.row {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(20px);
+  border-radius: 1.5rem;
+  box-shadow: 
+    0 25px 50px -12px rgba(0, 0, 0, 0.1),
+    0 0 0 1px rgba(255, 255, 255, 0.8);
+  border: none;
+  width: 100%;
+  max-width: 500px;
+  overflow: hidden;
+}
+
+.colMd6 {
+  width: 100%;
+}
+
+.offsetMd3 {
+  margin: 0 auto;
+}
+
+.textCenter {
+  text-align: center;
+  color: #1f2937;
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 2rem 0;
+  background: linear-gradient(135deg, #1e1b4b, #581c87);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.cardBody {
+  padding: 2.5rem;
+}
+
+.formGroup {
+  margin-bottom: 1.5rem;
+}
+
+.formLabel {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #374151;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.formControl {
+  width: 100%;
+  padding: 0.875rem 1rem;
+  border: 2px solid #e5e7eb;
+  border-radius: 0.75rem;
+  font-size: 1rem;
+  color: #1f2937;
+  background: #ffffff;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+}
+
+.formControl::placeholder {
+  color: #9ca3af;
+  font-weight: 400;
+}
+
+.formControl:focus {
+  outline: none;
+  border-color: #059669;
+  box-shadow: 
+    0 0 0 3px rgba(5, 150, 105, 0.1),
+    0 4px 15px -3px rgba(5, 150, 105, 0.2);
+  background: #ffffff;
+}
+
+.isInvalid {
+  border-color: #ef4444 !important;
+  box-shadow: 
+    0 0 0 3px rgba(239, 68, 68, 0.1),
+    0 4px 15px -3px rgba(239, 68, 68, 0.2) !important;
+}
+
+.invalidFeedback {
+  display: block;
+  color: #ef4444;
+  font-size: 0.875rem;
+  font-weight: 500;
+  margin-top: 0.5rem;
+  padding: 0.5rem 0.75rem;
+  background: rgba(239, 68, 68, 0.05);
+  border-radius: 0.5rem;
+  border-left: 3px solid #ef4444;
+}
+
+.textDanger {
+  color: #ef4444;
+  font-size: 0.875rem;
+  font-weight: 500;
+  margin-top: 0.5rem;
+  display: block;
+  padding: 0.5rem 0.75rem;
+  background: rgba(239, 68, 68, 0.05);
+  border-radius: 0.5rem;
+  border-left: 3px solid #ef4444;
+}
+
+.btnSuccess {
+  width: 100%;
+  background: linear-gradient(135deg, #059669, #0891b2);
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 0.75rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 25px -5px rgba(5, 150, 105, 0.3);
+  margin-top: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.btnSuccess:hover {
+  background: linear-gradient(135deg, #047857, #0e7490);
+  transform: translateY(-2px);
+  box-shadow: 0 15px 35px -5px rgba(5, 150, 105, 0.4);
+}
+
+.btnSuccess:active {
+  transform: translateY(0);
+  box-shadow: 0 10px 25px -5px rgba(5, 150, 105, 0.3);
+}
+
+/* Form animations */
+.formControl:hover {
+  border-color: #d1d5db;
+}
+
+.formGroup {
+  position: relative;
+}
+
+.formGroup::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 0;
+  background: linear-gradient(135deg, #059669, #0891b2);
+  transition: width 0.3s ease;
+}
+
+.formGroup:focus-within::before {
+  width: 100%;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    padding: 1rem;
+  }
+  
+  .textCenter {
+    font-size: 1.5rem;
+    margin: 1.5rem 0;
+  }
+  
+  .cardBody {
+    padding: 2rem;
+  }
+  
+  .formControl {
+    padding: 0.75rem;
+    font-size: 0.875rem;
+  }
+  
+  .btnSuccess {
+    padding: 0.875rem 1.5rem;
+    font-size: 0.875rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0.5rem;
+  }
+  
+  .card {
+    border-radius: 1rem;
+    max-width: none;
+    margin: 0 0.5rem;
+  }
+  
+  .cardBody {
+    padding: 1.5rem;
+  }
+  
+  .textCenter {
+    font-size: 1.25rem;
+  }
+  
+  .formControl {
+    padding: 0.625rem;
+  }
+  
+  .btnSuccess {
+    padding: 0.75rem 1.25rem;
+  }
+}
